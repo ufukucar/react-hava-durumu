@@ -5,7 +5,7 @@ const Sonuc = ({ sonuc }) => {
   return (
     <div className="row">
       {sonuc.map((item) => (
-        <SonucList item={item} />
+        <SonucList item={item} key={item.id} />
       ))}
     </div>
   );
