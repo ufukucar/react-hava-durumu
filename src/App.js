@@ -11,6 +11,7 @@ function App() {
   const [sonuc, setSonuc] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
@@ -39,15 +40,19 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+       
+       {/** Search component ine metodumuzu ve state lerimizi gönderiyoruz.  */}
         <Search
           handleOnSubmit={handleOnSubmit}
           sehir={sehir}
           setSehir={setSehir}
         />
-
-        {loading && <Loading />}
-
-        {sonuc.length > 0 && <Sonuc sonuc={sonuc} />}
+    
+        {/** Loading true ise sonuc gelmemiştir, Loading componentini gösterelim.
+         * Sonuc varsa ve sonuc dizisinde eleman varsa Sonuc componentine gidiyoruz. */}
+        { loading ? <Loading /> : sonuc.length > 0 && <Sonuc sonuc={sonuc} />}
+    
+    
       </div>
     </div>
   );
