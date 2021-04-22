@@ -2,7 +2,7 @@ import React from "react";
 
 const SonucList = ({ item }) => {
   return (
-    <div className="col-lg-6 col-md-6 mb-3" key={item.id}>
+    <div className="col-lg-6 col-md-6 mb-3" >
       <div className="card p-4">
         <div className="d-flex">
           <h6 className="flex-grow-1 text-center sehirAdi">
